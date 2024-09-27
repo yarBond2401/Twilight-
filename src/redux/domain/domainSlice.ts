@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchDomainData, fetchMoreDomainData } from "@/redux/domain/thunks";
+import {DomainResponse} from "@/redux/domain/types";
 
 interface DomainState {
-    data: any[];
+    data: DomainResponse['data'];
     next: string;
     status: 'idle' | 'loading' | 'succeeded' | 'failed';
-    moreDataStatus: 'idle' | 'loading' | 'succeeded' | 'failed';
     error: string | null;
 }
 
@@ -13,7 +13,6 @@ const initialState: DomainState = {
     data: [],
     next: '',
     status: 'idle',
-    moreDataStatus: 'idle',
     error: null,
 };
 
@@ -39,15 +38,15 @@ const domainSlice = createSlice({
 
             // Fetch More Domain Data
             .addCase(fetchMoreDomainData.pending, (state) => {
-                state.moreDataStatus = 'loading';
+                state.status = 'loading';
             })
             .addCase(fetchMoreDomainData.fulfilled, (state, action) => {
-                state.moreDataStatus = 'succeeded';
+                state.status = 'succeeded';
                 state.data = action.payload.data;
                 state.next = action.payload.next;
             })
             .addCase(fetchMoreDomainData.rejected, (state, action) => {
-                state.moreDataStatus = 'failed';
+                state.status = 'failed';
                 state.error = action.error.message || 'Something went wrong';
             });
     },

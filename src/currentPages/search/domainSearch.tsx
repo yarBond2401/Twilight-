@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useAppDispatch, useAppSelector } from "@/hooks";
 import { fetchDomainData, fetchMoreDomainData } from "@/redux/domain/thunks";
-import SearchBar from "@/common/searchBar";
-import Filters from "@/common/filters";
-import DataTable from "@/common/table";
+import SearchBar from "@/currentPages/search/components/searchBar";
+import Filters from "@/currentPages/search/components/filters";
+import DataTable from "@/currentPages/search/components/table";
 import Pagination from "@/common/pagination";
 import { Container, Box, Typography } from '@mui/material';
 
-const Search = () => {
+const SearchPage = () => {
     const [domain, setDomain] = useState('');
     const [filter, setFilter] = useState('');
     const [infectionDateFrom, setInfectionDateFrom] = useState('');
@@ -95,4 +95,4 @@ const Search = () => {
     );
 };
 
-export default Search;
+export default SearchPage;

@@ -30,17 +30,17 @@ const theme = createTheme({
             'sans-serif'
         ].join(','),
         fontSize: 14,
-        h1: { fontSize: '3.75rem' }, // Equivalent to 60px
-        h2: { fontSize: '3rem' },     // Equivalent to 48px
-        h3: { fontSize: '2.25rem' },  // Equivalent to 36px
-        body1: { fontSize: '1rem' },  // Equivalent to 16px
-        button: { fontSize: '0.875rem' } // Equivalent to 14px
+        h1: { fontSize: '3.75rem' },
+        h2: { fontSize: '3rem' },
+        h3: { fontSize: '2.25rem' },
+        body1: { fontSize: '1rem' },
+        button: { fontSize: '0.875rem' }
     },
     components: {
         MuiButton: {
             styleOverrides: {
                 root: {
-                    borderRadius: '8px', // default border radius
+                    borderRadius: '8px',
                 }
             }
         },

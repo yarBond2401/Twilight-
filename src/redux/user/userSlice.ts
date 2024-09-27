@@ -1,8 +1,9 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {fetchUserInfo} from "@/redux/user/thunks";
+import {UserData} from "@/redux/user/types";
 
 interface DomainState {
-    data: any;
+    data: UserData | null;
     status: 'idle' | 'loading' | 'succeeded' | 'failed';
     error: string | null;
 }

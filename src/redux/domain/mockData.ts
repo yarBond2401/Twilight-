@@ -1,4 +1,6 @@
-export const mockResponse = {
+import {DomainResponse} from "@/redux/domain/types";
+
+export const mockResponse: DomainResponse = {
     search_id: "85ae1e12-c52d-45fa-a2f2-6a04820e4ae7",
     search_consumed_credits: 12,
     credits_left: 58,
@@ -70,7 +72,7 @@ export const mockResponse = {
                 infection_date: "2024-09-22T17:23:06Z",
                 ip: "197.186.7.157",
                 malware_path: "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
-                username: "User",
+                username: "Page",
                 country: "TZ",
                 os: "Windows 10 Pro (10.0.19045) x64",
                 hwid: "92ADED832EE3C05C62B902DF6B5EF82E"
@@ -214,7 +216,7 @@ export const mockResponse = {
                 infection_date: "2024-09-21T07:26:19Z",
                 ip: "102.176.94.219",
                 malware_path: "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
-                username: "User",
+                username: "Page",
                 country: "GH",
                 os: "Windows 11",
                 hwid: "9A41C84BE6E82078588720"
@@ -241,7 +243,7 @@ export const mockResponse = {
                 infection_date: "2024-09-20T11:44:46Z",
                 ip: "154.160.23.104",
                 malware_path: "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
-                username: "User",
+                username: "Page",
                 country: null,
                 os: "Windows 11",
                 hwid: "506D99BF4AD54A469A2AC94D2D0B04A8"

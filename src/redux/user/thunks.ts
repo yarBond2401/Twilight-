@@ -1,14 +1,18 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
-import {twilightApi} from "@/redux/api";
+import {UserData} from "@/redux/user/types";
+import {delay, handleApiError} from "@/redux/utils";
+import {mockResponse} from "@/redux/user/mockData";
 
-export const fetchUserInfo = createAsyncThunk(
+export const fetchUserInfo = createAsyncThunk<UserData, void, { rejectValue: string }>(
     'user/fetchUserInfo',
     async (_, { rejectWithValue }) => {
         try {
-            const response = await twilightApi.get('/users/current');
-            return response;
+            await delay(2000);
+
+            return mockResponse;
+            /*return await twilightApi.get<UserData>('/users/current');*/
         } catch (error: any) {
-            return rejectWithValue(error.response?.data || error.message);
+            return rejectWithValue(handleApiError(error));
         }
     }
 );

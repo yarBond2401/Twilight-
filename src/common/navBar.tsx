@@ -61,7 +61,7 @@ const NavBar: React.FC = () => {
                 >
                     <Tab label="Domains" />
                     <Tab label="Page Info" />
-                    <Tab label="Graphs" />
+                    {/*<Tab label="Graphs" />*/}
                 </Tabs>
             </Toolbar>
         </AppBar>

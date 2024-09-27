@@ -68,4 +68,4 @@ class TwilightApi {
     }
 }
 
-export const twilightApi = new TwilightApi('https://api3.twilightcyber.com/', 'fb1fffffa1e09a0888bbe10987edfc');
+export const twilightApi = new TwilightApi(process.env.TWILIGHT_API_URL as string, process.env.TWILIGHT_API_KEY);
