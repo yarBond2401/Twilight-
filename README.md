@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Twilight Project
+
+Welcome to the **Twilight Project**! This project is designed to provide a comprehensive solution utilizing the Twilight Cyber API, featuring a modern UI built with Next.js, Redux Toolkit, and custom hooks.
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Folder Structure](#folder-structure)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Getting Started
 
-First, run the development server:
+To get started with the Twilight Project, follow these instructions:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd test-project
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install the dependencies:
+   ```bash
+   yarn install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Start the development server:
+   ```bash
+   yarn dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open your browser and navigate to `http://localhost:3000`.
 
-## Learn More
+## Folder Structure
 
-To learn more about Next.js, take a look at the following resources:
+The project is organized into the following main directories:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **`/src/app`**: Contains all the main pages of the application, structured based on Next.js conventions.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **`/src/common`**: Houses all general components related to the project, which can be reused across various parts of the application.
 
-## Deploy on Vercel
+- **`/src/currentPages`**: Includes all pages and their subcomponents related to specific functionalities within the app.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **`/src/hooks`**: Contains custom hooks that provide reusable logic throughout the application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **`/src/redux`**: This directory contains the Redux state management files:
+    - **`/domain`**: This subdirectory includes:
+        - **Thunks**: For asynchronous operations.
+        - **Mock Data**: Sample data for testing purposes or to simulate API responses.
+        - **Types**: TypeScript types related to this module.
+        - **Slice**: General state management with actions and reducers.
+
+- **`/src/theme`**: Contains the theme configuration, including styles and design tokens used throughout the application.
+
+## Features
+
+- Integration with the Twilight Cyber API.
+- Custom hooks for enhanced state management.
+- Modular Redux structure for scalable state management.
+- Reusable components for consistent UI design.
+
+## Technologies
+
+- **Next.js**: A React framework for server-side rendering and static site generation.
+- **Redux Toolkit**: For efficient and predictable state management.
+- **TypeScript**: For type safety and better developer experience.
+- **CSS Modules / MUI**: For styling the application.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or fix:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add a feature"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Create a pull request.
