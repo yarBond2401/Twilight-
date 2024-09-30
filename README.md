@@ -18,7 +18,7 @@ To get started with the Twilight Project, follow these instructions:
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd test-project
+   cd twilight-project
    ```
 
 2. Install the dependencies:
